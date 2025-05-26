@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "datadock"
+package-mode = false
+version = "2.0.5"
+description = "datadock python library documentation."
+authors = ["Peter Mbachu <peter.mbachu@datadock.ai>"]
+maintainers = ["Rita Chinwendu <rita.chinwendu@datadock.ai>"]
+license = "MIT"
+readme = "README.md"
+keywords = ["datadockpy", "datadockAI", "python", "SEC"]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Development Status :: 5 - Production/Stable",
+    "Natural Language :: English",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[license]
+text = "Copyright ©2024 Peter Mbachu"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+sphinx-copybutton = "^0.5.2"
+
+[tool.poetry.group.docs.dependencies]
+pdflatex = "^0.1.3"
+sphinx = "^7.2.6"
+sphinx-rtd-theme = "^2.0.0"
+sphinxawesome-theme = "^5.1.1"
+sphinx-autobuild = "^2024.2.4"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.2"
+
+[tool.black]
+target-version = ['py310', 'py311']
+include = '\.pyi?$'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
