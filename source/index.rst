@@ -47,7 +47,6 @@ To get started, refer to the :doc:`get_started` section for installation instruc
    features
    sec_filings
    use_cases
-   faqs
    glossary
 
 
