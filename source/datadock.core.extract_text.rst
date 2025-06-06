@@ -36,7 +36,6 @@ Extracts text content from a child HTML element based on specified tag, ID, or c
        :emphasize-lines: 12
     
         from bs4 import BeautifulSoup
-        from SECStreamPy import extract_child_text
 
         html = "<div><p id='child'>Hello, World!</p></div>"
     
@@ -78,7 +77,6 @@ Extracts text content from a child HTML element based on specified tag, ID, or c
        :emphasize-lines: 10
 
         from bs4 import BeautifulSoup
-        from SECStreamPy import extract_filer_info
 
         html = "<div class='companyInfo'>Company Name: SECStreamPy AI</div>"
 
@@ -116,7 +114,6 @@ Extracts text content from a child HTML element based on specified tag, ID, or c
        :emphasize-lines: 8
 
         from bs4 import BeautifulSoup
-        from SECStreamPy import extract_financial_data
 
         html = "<table><tr><td>Value</td></tr></table>"
 
@@ -148,7 +145,6 @@ Extracts text content from a child HTML element based on specified tag, ID, or c
        :emphasize-lines: 11
 
         from bs4 import BeautifulSoup
-        from SECStreamPy import extract_form_info
 
 
         html = "<div class='formClass'>Form Data</div>"
@@ -187,8 +183,6 @@ Extracts text content from a child HTML element based on specified tag, ID, or c
         .. code-block:: python
            :linenos:
            :emphasize-lines: 10, 11
-
-            from SECStreamPy import extract_text import extract_header_pattern
 
             raw_text =
             """<DOCUMENT>
@@ -229,7 +223,6 @@ Extracts text content from a child HTML element based on specified tag, ID, or c
          :emphasize-lines: 14
 
           from bs4 import BeautifulSoup
-          from SECStreamPy import extract_tables_info
 
 
           html =
@@ -266,7 +259,6 @@ Extracts text content from a child HTML element based on specified tag, ID, or c
        :linenos:
        :emphasize-lines: 12
 
-        from SECStreamPy import get_filing_data_html
 
         html = 
         """<html>
