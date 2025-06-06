@@ -19,7 +19,9 @@ Synchronous support:
 
 .. code-block:: python
 
-    from SECStreamPy import VERSION
+    from SECStreamPy import get_filing, FilingInfo, FilingListingIndex, VERSION
+    from SECStreamPy.src.data_class import ViewType
+
 
     SECStreamPy_version = VERSION
 
