@@ -44,12 +44,3 @@ See example below:
    for match in matches:
       print(f"Matched Section: {match[0]} {match[1]}")
 
-
-Output:
-
-::
-
-   Matched Section: Item 1. Security and Issuer
-   Matched Section: Item 2. Identity and Background
-   Matched Section: Item 3. Source and Amount of Funds or Other Consideration
-   Matched Section: Item 4. Purpose of Transaction
