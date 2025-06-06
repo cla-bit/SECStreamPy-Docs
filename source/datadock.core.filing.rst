@@ -10,7 +10,7 @@ This module is essential for applications that need to process financial data, c
 
 -----------------
 
-.. py:class:: FilingListingIndex(filing_info: FilingInfo, dir_view: bool = True, index_view: bool = False, txt_view: bool = False) -> None
+.. py:class:: FilingListingIndex(filing_info: FilingInfo, view: ViewType = ViewType.DIRECTORY) -> None
 
     A class that handles the indexing and retrieval of SEC filing documents.
 
@@ -21,11 +21,7 @@ This module is essential for applications that need to process financial data, c
     - **Parameters**
         - filing_info (FilingInfo): A data object containing metadata and details about the SEC filing (e.g., accession number, filing date, company name).
 
-        - dir_view (bool, optional): A flag to enable or disable the directory view of the filing. Defaults to True.
-
-        - index_view (bool, optional): A flag to enable or disable the index view of the filing. Defaults to False.
-
-        - txt_view (bool, optional): A flag to enable or disable the text view of the filing. Defaults to False.
+        - view (ViewType): A flag to enable or disable the directory, indes, text view of the filing. Defaults to ViewType.DIRECTORY.
 
     .. py:method:: property accession: str
 
@@ -38,21 +34,21 @@ This module is essential for applications that need to process financial data, c
                :linenos:
                :emphasize-lines: 15
 
-                from SECStreamPy.src.data_class import FilingInfo
-                from SECStreamPy.core.filing import FilingListingIndex
+                from SECStreamPy.src.data_class import ViewType
+                from SECStreamPy import FilingListingIndex, FilingInfo
 
                 # Example FilingInfo object
                 filing_info = FilingInfo(
-                    accession_number="00000000123",
-                    filing_date="2025-01-17",
-                    company_name="Example Corp"
+                    cik="",
+                    accession_number="",
+                    form_type="",
                 )
 
                 # Create a FilingListingIndex instance
-                filing_index = FilingListingIndex(filing_info, dir_view=True, index_view=True)
+                filing_index = FilingListingIndex(filing_info)  # use default view type
 
                 # Access the accession property
-                print(f"Accession Number: {filing_index.accession}")  # Output: "00000000123"
+                filing_index.accession
 
 
     .. py:method:: property accession: str
@@ -104,7 +100,7 @@ This module is essential for applications that need to process financial data, c
 
     This function formats the given document data into a rich display format based on the provided parameters.
 
-.. py:function:: filing.get_filing(cik: str = None, accession: str = None, form: IntString = None, amendment: bool = False, fill: bool = False, txt: bool = False) -> FilingListingIndex
+.. py:function:: filing.get_filing(cik: str = None, accession: str = None, form: IntString = None, amendment: bool = False, view: ViewType = ViewType.DIRECTORY) -> FilingListingIndex
 
     Fetches filing information from the SEC's EDGAR database.
     It returns a Filing information object containing CIK, accession number, and form type.
