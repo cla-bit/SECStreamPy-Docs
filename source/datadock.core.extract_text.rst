@@ -6,6 +6,13 @@ Extract_text module
 
 The `extract_text` module provides a collection of functions to extract and process data from HTML documents using BeautifulSoup. These functions are designed to simplify data extraction from complex filing documents, focusing on retrieving text, filer information, financial data, and more.
 
+----------------
+
+.. code-block:: python
+
+    from SECStreamPy.core.extract_text import *
+
+
 -----------------
 
 .. py:function:: extract_child_text(tag: Tag, child_tag: str, child_id: str = None, child_class: str = None) -> str
