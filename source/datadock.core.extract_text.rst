@@ -45,9 +45,6 @@ Extracts text content from a child HTML element based on specified tag, ID, or c
     
         text = extract_child_text(parent_tag, child_tag='p', child_id='child')
     
-        print(text)  # Output: Hello, World!
-
-
 ----
 
 
@@ -84,9 +81,6 @@ Extracts text content from a child HTML element based on specified tag, ID, or c
 
         info = extract_filer_info(soup)
 
-        print(info)  # Output: [{'company_name': 'SECStreamPy AI'}]
-
-
 ------------------------
 
 
@@ -118,9 +112,6 @@ Extracts text content from a child HTML element based on specified tag, ID, or c
         html = "<table><tr><td>Value</td></tr></table>"
 
         table = extract_financial_data(html)
-    
-        print(table)  # Output: pyarrow.Table with one row
-
 
 ----
 
@@ -152,9 +143,6 @@ Extracts text content from a child HTML element based on specified tag, ID, or c
         soup = BeautifulSoup(html, 'html.parser')
 
         form_data = extract_form_info(soup, attributes={"class": "formClass"})
-
-        print(form_data)  # Output: {'form_data': 'Form Data'}
-
 
 ----
 
@@ -191,9 +179,6 @@ Extracts text content from a child HTML element based on specified tag, ID, or c
             </DOCUMENT>"""
             
             header = extract_header_pattern(raw_text, "10-K")
-            print(header.document_type)  # Output: "10-K"
-            print(header.raw_text)      # Output: "Report Content Here"
-
 
 ----
 
@@ -233,8 +218,6 @@ Extracts text content from a child HTML element based on specified tag, ID, or c
 
           soup = BeautifulSoup(html, 'html.parser')
           tables = extract_tables_info(soup)
-          print(tables)
-          # Output: [{'Revenue': '$100M', 'Profit': '$20M'}]
 
 ------------
 
@@ -268,5 +251,3 @@ Extracts text content from a child HTML element based on specified tag, ID, or c
         </html>"""
         
         data = get_filing_data_html(html)
-        print(data)
-        # Output: {'form_data': {...}, 'tables_data': [...], 'filer_data': [...]}
